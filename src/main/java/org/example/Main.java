@@ -1,7 +1,6 @@
 package org.example;
 
 import java.util.*;
-import java.lang.*;
 
 
 class TringappsBankAcc{
@@ -13,13 +12,13 @@ class TringappsBankAcc{
         this.accNumber=num;
         this.accBlnc=blc;
     }
-    void Text(){
+    void text(){
         System.out.println("1)Deposit Cash\n2)Withdraw Cash\n3)Balance Enquiry\n4)Exit");
     }
     void depositCash(int x){
         accBlnc+=x;
         System.out.println("Cash is Deposited in your Account ..\n");
-        //System.out.println("1)Deposit Cash\n2)Withdraw Cash\n3)Balance Enquiry\n4)Exit");
+
     }
     void withdrawCash(int x){
         if(accBlnc>x) {
@@ -48,15 +47,18 @@ public class Main {
         int accnumber=in.nextInt();
 
         TringappsBankAcc ob= new TringappsBankAcc(accHoldername,accnumber,0.0);
-        ob.Text();
-        int a,b,c;
+        ob.text();
+        int a;
+        int b;
+        int c;
+
         a=in.nextInt();
         while(a!=4){
             if(a==1) {
                 System.out.println("Enter the Amount And add the Cash that you want to Deposit .");
                 b=in.nextInt();
                 ob.depositCash(b);
-                ob.Text();
+                ob.text();
                 System.out.println("Enter your Request Number \n");
 
                 a=0;
@@ -67,7 +69,7 @@ public class Main {
                 c=in.nextInt();
                 ob.withdrawCash(c);
 
-                ob.Text();
+                ob.text();
                 System.out.println("\nEnter your Request Number\n ");
                 a=0;
                 a=in.nextInt();
@@ -77,7 +79,7 @@ public class Main {
             {
                 System.out.print("your current Balnce=>");
                 System.out.println(ob.blncEnquiry());
-                ob.Text();
+                ob.text();
                 System.out.println("Enter your Request Number ");
                 a=0;
                 a=in.nextInt();
