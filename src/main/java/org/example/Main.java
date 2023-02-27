@@ -46,8 +46,9 @@ public class Main {
             }
             if(a==3)
             {
-                System.out.print("your current Balnce=>");
-                ouput.info("" + ob.blncEnquiry());
+                ouput.info("your current Balnce=>");
+                String sss="";
+                ouput.info( sss+ob.blncEnquiry());
                 ob.text();
                 ouput.info("Enter your Request Number ");
                 a=0;
