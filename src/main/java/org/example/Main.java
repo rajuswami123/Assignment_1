@@ -3,39 +3,6 @@ package org.example;
 import java.util.*;
 
 
-class TringappsBankAcc{
-    private String accHolderName;
-    private	int accNumber;
-    private	double accBlnc;
-    TringappsBankAcc(String name,int num,double blc){
-        this.accHolderName=name;
-        this.accNumber=num;
-        this.accBlnc=blc;
-    }
-    void text(){
-        System.out.println("1)Deposit Cash\n2)Withdraw Cash\n3)Balance Enquiry\n4)Exit");
-    }
-    void depositCash(int x){
-        accBlnc+=x;
-        System.out.println("Cash is Deposited in your Account ..\n");
-
-    }
-    void withdrawCash(int x){
-        if(accBlnc>x) {
-            accBlnc-=x;
-            System.out.println("You Have successfully withdrwan Cash");
-        }
-        else {System.out.println("You Dont Have Sufficient Balance.");
-
-
-        }
-
-    }
-    double blncEnquiry(){
-        return accBlnc;
-    }
-
-}
 public class Main {
     public static void main(String[] args) {
         Scanner in= new Scanner(System.in);
